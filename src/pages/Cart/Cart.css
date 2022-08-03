@@ -1,0 +1,87 @@
+.cart-page {
+  height: 100vh;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px;
+  gap: 21px;
+  background: #fffdfd;
+  border: 1px solid #bdbdbd;
+  box-shadow: -10px 20px 40px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px 8px 0 0;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: auto;
+  height: 120px;
+  text-align: center;
+}
+
+.cart-img {
+  width: auto;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.cart-body h4,
+h5 {
+  line-height: 0;
+}
+
+.cart-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-plusminus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.icon-plusminus button {
+  border-radius: 50%;
+  border: 1px solid #bdbdbd;
+  padding: 2px 3px;
+}
+
+.btn-trash .fa-trash-can {
+  color: #ec0000;
+  font-size: 17px;
+}
+
+.btn-trash {
+  background-color: #fffdfd;
+  border: none;
+}
+
+.cart-complete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  gap: 21px;
+  background: #fffdfd;
+  border: 1px solid #bdbdbd;
+  box-shadow: -10px 20px 40px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 8px 8px;
+  width: 500px;
+  height: 70px;
+  margin: 10px auto;
+}
