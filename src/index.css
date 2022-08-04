@@ -204,13 +204,20 @@ button {
   font-size: 16px;
 }
 
+/* footer */
+footer {
+  background-color: #333333;
+  color: #fff;
+  height: 400px;
+}
+
 /* media */
-@media(max-width: 1400px){
+@media (max-width: 1400px) {
   .header {
     padding: 0 10px;
   }
 }
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   header .brand h1 {
     display: none;
   }

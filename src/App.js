@@ -6,6 +6,7 @@ import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
 import menuData from "./menuData";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [menuItems, setMenuItems] = useState(menuData);
@@ -20,17 +21,20 @@ export default function App() {
   };
 
   return (
-    <div className="pizza-app container">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/menu"
-          element={<Menu menuData={menuItems} filterSize={filterSize} />}
-        />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+    <div className="pizza-app">
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/menu"
+            element={<Menu menuData={menuItems} filterSize={filterSize} />}
+          />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }
