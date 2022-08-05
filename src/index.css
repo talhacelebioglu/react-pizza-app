@@ -206,9 +206,41 @@ button {
 
 /* footer */
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #333333;
   color: #fff;
   height: 400px;
+}
+
+.footer-above {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer-above ul {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-above ul li {
+  padding: 3px 0;
+}
+
+.footer-below {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social i {
+  padding: 5px;
+  color: #fff;
 }
 
 /* media */
