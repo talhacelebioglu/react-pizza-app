@@ -9,23 +9,23 @@ export default function Footer() {
           <ul>
             <li>Lorem, ipsum.</li>
             <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
             <li>Lorem ipsum dolor sit.</li>
           </ul>
         </div>
         <div className="services">
           <strong>Services</strong>
           <ul>
-            <li>Lorem, ipsum.</li>
+            <li>Lorem ipsum dolor sit.</li>
             <li>Lorem, ipsum dolor.</li>
             <li>Lorem, ipsum.</li>
-            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
           </ul>
         </div>
         <div className="customer-information">
           <strong>Customer Information</strong>
           <ul>
-            <li>Lorem, ipsum.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
             <li>Lorem, ipsum dolor.</li>
             <li>Lorem, ipsum.</li>
             <li>Lorem ipsum dolor sit.</li>

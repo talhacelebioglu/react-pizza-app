@@ -35,7 +35,7 @@ export default function Menu({menuData, filterSize}) {
               >
                 ${item.price.toFixed(2)}
               </span>
-              <button className="btn-add-cart-menu">ADD TO CART</button>
+              <button className="btn-add-cart-menu">Add to Cart</button>
             </div>
           </div>
         ))}

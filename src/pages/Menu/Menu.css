@@ -1,6 +1,7 @@
 .filter {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -66,12 +67,12 @@
 .btn-add-cart-menu {
   background-color: #ec0000;
   color: #fff;
-  width: 110px;
+  width: 100px;
   height: 30px;
   border: none;
   border-radius: 15px;
   padding: 8px 0px 6px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .btn-add-cart-menu:hover {
