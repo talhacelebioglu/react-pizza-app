@@ -1,8 +1,12 @@
 import React from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import CartContext from "../Context/CartContext";
 import CartSvg from "./CartSvg";
 
 export default function Header() {
+  const { items } = useContext(CartContext);
+
   return (
     <header>
       <div className="header">
@@ -30,8 +34,8 @@ export default function Header() {
             <li>
               <NavLink to="/cart">
                 <button className="btn-cart">
-                  <CartSvg/>
-                  <b className="badge-cart">0</b>
+                  <CartSvg />
+                  <b className="badge-cart">{items.length}</b>
                 </button>
               </NavLink>
             </li>

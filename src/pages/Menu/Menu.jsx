@@ -1,16 +1,36 @@
 import React from "react";
+import { useContext } from "react";
+import CartContext from "../../Context/CartContext";
 import "./Menu.css";
 
-export default function Menu({menuData, filterSize}) {
-  
+export default function Menu({ menuData, filterSize }) {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div className="menu">
       <h1 style={{ textAlign: "center", margin: "50px 0" }}>Our Menu</h1>
       <div className="filter">
-        <button className="btn-add-cart-menu" onClick={() => filterSize('All')}>All</button>
-        <button className="btn-add-cart-menu" onClick={() => filterSize('Small')}>Small</button>
-        <button className="btn-add-cart-menu" onClick={() => filterSize('Regular')}>Regular</button>
-        <button className="btn-add-cart-menu" onClick={() => filterSize('Large')}>Large</button>
+        <button className="btn-add-cart-menu" onClick={() => filterSize("All")}>
+          All
+        </button>
+        <button
+          className="btn-add-cart-menu"
+          onClick={() => filterSize("Small")}
+        >
+          Small
+        </button>
+        <button
+          className="btn-add-cart-menu"
+          onClick={() => filterSize("Regular")}
+        >
+          Regular
+        </button>
+        <button
+          className="btn-add-cart-menu"
+          onClick={() => filterSize("Large")}
+        >
+          Large
+        </button>
       </div>
       <div className="cards-menu">
         {menuData.map((item) => (
@@ -35,7 +55,20 @@ export default function Menu({menuData, filterSize}) {
               >
                 ${item.price.toFixed(2)}
               </span>
-              <button className="btn-add-cart-menu">Add to Cart</button>
+              <button
+                onClick={() =>
+                  addToCart(
+                    item.id,
+                    item.img,
+                    item.title,
+                    item.size,
+                    item.price
+                  )
+                }
+                className="btn-add-cart-menu"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
