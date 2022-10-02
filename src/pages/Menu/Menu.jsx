@@ -41,8 +41,8 @@ export default function Menu({ menuData, filterSize }) {
               alt={item.title}
             ></img>
             <div className="card-body-menu">
-              <h3>{item.title}</h3>
-              <h4>({item.size})</h4>
+              <h4>{item.title}</h4>
+              <h5>({item.size})</h5>
               <p>{item.desc}</p>
             </div>
             <div className="card-footer-menu">
