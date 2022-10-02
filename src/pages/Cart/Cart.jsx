@@ -1,10 +1,10 @@
 import React from "react";
 import { useContext } from "react";
-import CartContext from "../../Context/CartContext";
+import CartContext from "../../context/CartContext";
 import "./Cart.css";
 
 export default function Cart() {
-  const { items } = useContext(CartContext);
+  const { items, removeToCart } = useContext(CartContext);
 
   const totalPrice = items.reduce((total, item) => total + item.price, 0);
 
@@ -23,7 +23,7 @@ export default function Cart() {
                   <span
                     style={{
                       color: "#05A84B",
-                      fontSize: "20px",
+                      fontSize: "1.1rem",
                       fontWeight: "bold",
                     }}
                   >
@@ -48,7 +48,10 @@ export default function Cart() {
                     </button>
                   </div>
                   <div className="icon-trash">
-                    <button className="btn-trash">
+                    <button
+                      onClick={() => removeToCart(i.id)}
+                      className="btn-trash"
+                    >
                       <i className="fa-solid fa-trash-can"></i>
                     </button>
                   </div>
@@ -56,6 +59,9 @@ export default function Cart() {
               </div>
             </div>
           ))}
+          <div className="cart-empty">
+            <h4>{items && items.length ? "" : "Cart is empty"}</h4>
+          </div>
         </div>
         <div className="cart-footer">
           <h3>
@@ -63,7 +69,7 @@ export default function Cart() {
             <span
               style={{
                 color: "#05A84B",
-                fontSize: "20px",
+                fontSize: "1.1rem",
                 fontWeight: "bold",
               }}
             >

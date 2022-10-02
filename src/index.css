@@ -340,7 +340,7 @@ footer {
     padding: 7px 11px;
   }
   .btn-add-cart-menu {
-    width: 88px !important;
+    width: 140px !important;
   }
   .filter {
     gap: 5px !important;
@@ -348,7 +348,29 @@ footer {
   .cart {
     width: 100% !important;
   }
+  .cart-item {
+    height: 100px !important;
+  }
   .form-login {
     width: 100% !important;
+  }
+  .cards-menu {
+    gap: 10px !important;
+  }
+  .card-menu {
+    gap: 5px !important;
+    width: 150px !important;
+    height: 300px !important;
+  }
+  .card-img-menu {
+    height: 120px !important;
+  }
+  .card-body-menu p {
+    line-height: 1 !important;
+    height: 30px !important;
+  }
+  .card-footer-menu {
+    flex-direction: column !important;
+    gap: 10px !important;
   }
 }

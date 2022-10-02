@@ -4,10 +4,12 @@ import Home from "./pages/Home/Home";
 import Menu from "./pages/Menu/Menu";
 import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
-import menuData from "./Data/menuData";
+import menuData from "./data/menuData";
 import { useState } from "react";
 import Footer from "./components/Footer";
-import { CartProvider } from "./Context/CartContext";
+import { CartProvider } from "./context/CartContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   const [menuItems, setMenuItems] = useState(menuData);
@@ -24,6 +26,7 @@ export default function App() {
   return (
     <div className="pizza-app">
       <div className="container">
+        <ToastContainer />
         <CartProvider>
           <Header />
           <Routes>

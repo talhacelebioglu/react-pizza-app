@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import CartContext from "../../Context/CartContext";
+import CartContext from "../../context/CartContext";
 import "./Menu.css";
 
 export default function Menu({ menuData, filterSize }) {
@@ -49,7 +49,7 @@ export default function Menu({ menuData, filterSize }) {
               <span
                 style={{
                   color: "#05A84B",
-                  fontSize: "20px",
+                  fontSize: "1.1rem",
                   fontWeight: "bold",
                 }}
               >

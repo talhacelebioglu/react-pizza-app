@@ -1,11 +1,11 @@
 import React from "react";
-import cardData from "../Data/cardData";
+import cardData from "../data/cardData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useContext } from "react";
-import CartContext from "../Context/CartContext";
+import CartContext from "../context/CartContext";
 
 export default function Card() {
   const { addToCart } = useContext(CartContext);
