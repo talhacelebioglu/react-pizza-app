@@ -4,10 +4,10 @@ import Home from "./pages/Home/Home";
 import Menu from "./pages/Menu/Menu";
 import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
-import menuData from "./data/menuData";
+import menuData from "./Data/menuData";
 import { useState } from "react";
 import Footer from "./components/Footer";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./Context/CartContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

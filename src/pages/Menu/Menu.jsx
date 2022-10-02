@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import CartContext from "../../context/CartContext";
+import CartContext from "../../Context/CartContext";
 import "./Menu.css";
 
 export default function Menu({ menuData, filterSize }) {

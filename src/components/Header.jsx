@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import CartContext from "../context/CartContext";
+import CartContext from "../Context/CartContext";
 import CartSvg from "./CartSvg";
 
 export default function Header() {
