@@ -1,10 +1,11 @@
 import React from "react";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 import "./Cart.css";
 
 export default function Cart() {
-  const { items, removeToCart } = useContext(CartContext);
+  const { items, removeFromCart } = useContext(CartContext);
 
   const totalPrice = items.reduce((total, item) => total + item.price, 0);
 
@@ -41,7 +42,7 @@ export default function Cart() {
                         fontSize: "20px",
                       }}
                     >
-                      1
+                      {i.qty}
                     </span>
                     <button>
                       <i className="fa-solid fa-plus"></i>
@@ -49,7 +50,7 @@ export default function Cart() {
                   </div>
                   <div className="icon-trash">
                     <button
-                      onClick={() => removeToCart(i.id)}
+                      onClick={() => removeFromCart(i.id)}
                       className="btn-trash"
                     >
                       <i className="fa-solid fa-trash-can"></i>
@@ -76,7 +77,9 @@ export default function Cart() {
               ${totalPrice.toFixed(2)}
             </span>
           </h3>
-          <button className="btn-sign-in">Checkout</button>
+          <NavLink to="/login">
+            <button className="btn-sign-in">Checkout</button>
+          </NavLink>
         </div>
       </div>
     </div>
