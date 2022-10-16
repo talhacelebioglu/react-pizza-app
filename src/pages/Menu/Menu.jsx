@@ -1,10 +1,22 @@
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
+import menuData from "../../Data/menuData";
 import CartContext from "../../Context/CartContext";
 import "./Menu.css";
 
-export default function Menu({ menuData, filterSize }) {
+export default function Menu() {
   const { addToCart } = useContext(CartContext);
+  const [menuItems, setMenuItems] = useState(menuData);
+
+  const filterSize = (size) => {
+    if (size === "All") {
+      setMenuItems(menuData);
+      return;
+    }
+    const newSize = menuData.filter((item) => item.size === size);
+    setMenuItems(newSize);
+  };
 
   return (
     <div className="menu">
@@ -33,7 +45,7 @@ export default function Menu({ menuData, filterSize }) {
         </button>
       </div>
       <div className="cards-menu">
-        {menuData.map((item) => (
+        {menuItems.map((item) => (
           <div key={item.id} className="card-menu">
             <img
               src={item.img}
@@ -56,15 +68,7 @@ export default function Menu({ menuData, filterSize }) {
                 ${item.price.toFixed(2)}
               </span>
               <button
-                onClick={() =>
-                  addToCart(
-                    item.id,
-                    item.img,
-                    item.title,
-                    item.size,
-                    item.price
-                  )
-                }
+                onClick={() => addToCart(item)}
                 className="btn-add-cart-menu"
               >
                 Add to Cart

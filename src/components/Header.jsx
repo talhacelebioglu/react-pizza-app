@@ -7,6 +7,11 @@ import CartSvg from "./CartSvg";
 export default function Header() {
   const { items } = useContext(CartContext);
 
+  const totalItem = items.reduce(
+    (total, item) => (total = total + item.qty),
+    0
+  );
+
   return (
     <header>
       <div className="header">
@@ -35,7 +40,7 @@ export default function Header() {
               <NavLink to="/cart">
                 <button className="btn-cart">
                   <CartSvg />
-                  <b className="badge-cart">{items.length}</b>
+                  <b className="badge-cart">{totalItem}</b>
                 </button>
               </NavLink>
             </li>

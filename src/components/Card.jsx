@@ -54,15 +54,7 @@ export default function Card() {
                     <option value="regular">Regular</option>
                   </select>
                   <button
-                    onClick={() =>
-                      addToCart(
-                        item.id,
-                        item.img,
-                        item.title,
-                        item.size,
-                        item.price
-                      )
-                    }
+                    onClick={() => addToCart(item)}
                     className="btn-add-cart"
                   >
                     ADD TO CART

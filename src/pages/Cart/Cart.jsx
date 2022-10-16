@@ -5,9 +5,13 @@ import CartContext from "../../Context/CartContext";
 import "./Cart.css";
 
 export default function Cart() {
-  const { items, removeFromCart } = useContext(CartContext);
+  const { items, removeFromCart, increaseItem, decreaseItem } =
+    useContext(CartContext);
 
-  const totalPrice = items.reduce((total, item) => total + item.price, 0);
+  const totalPrice = items.reduce(
+    (total, item) => (total = total + item.price * item.qty),
+    0
+  );
 
   return (
     <div className="cart-page">
@@ -33,7 +37,7 @@ export default function Cart() {
                 </div>
                 <div className="cart-icons">
                   <div className="icon-plusminus">
-                    <button>
+                    <button onClick={() => decreaseItem(i.id)}>
                       <i className="fa-solid fa-minus"></i>
                     </button>
                     <span
@@ -44,7 +48,7 @@ export default function Cart() {
                     >
                       {i.qty}
                     </span>
-                    <button>
+                    <button onClick={() => increaseItem(i.id)}>
                       <i className="fa-solid fa-plus"></i>
                     </button>
                   </div>
